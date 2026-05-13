@@ -249,8 +249,8 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
                     onClick = { speak(speechText) },
                     baseColor = Color(0xFF58CC02),
                     shadowColor = Color(0xFF46A302),
-                    size = 280.dp,
-                    modifier = Modifier.align(Alignment.CenterEnd).offset(x = 60.dp)
+                    size = 170.dp,
+                    modifier = Modifier.align(Alignment.Center)
                 )
             }
         }
