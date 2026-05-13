@@ -116,14 +116,6 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
             )
             resultRecorded = true
         }
-        if (isAnswered && isCorrect) {
-            delay(1200)
-            if (currentIndex < exercises.size - 1) {
-                currentIndex++
-            } else {
-                showSummary = true
-            }
-        }
     }
 
     if (showSummary) {
