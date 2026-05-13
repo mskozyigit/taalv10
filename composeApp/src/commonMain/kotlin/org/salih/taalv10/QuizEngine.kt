@@ -188,17 +188,17 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
     if (isAnswered) {
         Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(16.dp))
-                .background(if (isCorrect) Color(0xFFD7FFB8) else Color(0xFFFFDFE0))
-                .padding(24.dp)
+                .fillMaxSize()
         ) {
-            Column {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .align(Alignment.BottomCenter)
+                    .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
+                    .background(if (isCorrect) Color(0xFFD7FFB8) else Color(0xFFFFDFE0))
+                    .padding(24.dp)
+            ) {
+                Column {
                     Text(
                         text = if (isCorrect) "GOED BEZIG!" else "FOUT!",
                         fontWeight = FontWeight.ExtraBold,
@@ -206,22 +206,9 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
                         color = if (isCorrect) Color(0xFF58A700) else Color(0xFFEA2B2B)
                     )
                     
-                    if (isCorrect) {
-                        val speechText = when (currentExercise.type) {
-                            ExerciseType.FILL_IN_THE_BLANK -> currentExercise.context.replace("___", currentExercise.correctAnswer)
-                            ExerciseType.HUSSELAAR -> currentExercise.correctSentence
-                        }
-                        SpeakerButton(
-                            onClick = { speak(speechText) },
-                            baseColor = Color(0xFF58CC02),
-                            shadowColor = Color(0xFF46A302)
-                        )
-                    }
-                }
-                
-                Spacer(modifier = Modifier.height(16.dp))
-                
-                DuolingoButton(
+                    Spacer(modifier = Modifier.height(16.dp))
+                    
+                    DuolingoButton(
                         text = if (currentIndex < exercises.size - 1) "Volgende" else "Klaar",
                         baseColor = if (isCorrect) Color(0xFF58CC02) else Color(0xFFFF4B4B),
                         shadowColor = if (isCorrect) Color(0xFF46A302) else Color(0xFFD13B3B),
@@ -252,7 +239,22 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
                     )
                 }
             }
-        } else if (currentExercise.type == ExerciseType.FILL_IN_THE_BLANK && selectedAnswer != null) {
+
+            if (isCorrect) {
+                val speechText = when (currentExercise.type) {
+                    ExerciseType.FILL_IN_THE_BLANK -> currentExercise.context.replace("___", currentExercise.correctAnswer)
+                    ExerciseType.HUSSELAAR -> currentExercise.correctSentence
+                }
+                SpeakerButton(
+                    onClick = { speak(speechText) },
+                    baseColor = Color(0xFF58CC02),
+                    shadowColor = Color(0xFF46A302),
+                    size = 280.dp,
+                    modifier = Modifier.align(Alignment.CenterEnd).offset(x = 60.dp)
+                )
+            }
+        }
+    } else if (currentExercise.type == ExerciseType.FILL_IN_THE_BLANK && selectedAnswer != null) {
             DuolingoButton(
                 text = "Controleer",
                 baseColor = category.color,

@@ -151,7 +151,8 @@ fun SpeakerButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     baseColor: Color = Color(0xFF1CB0F6),
-    shadowColor: Color = Color(0xFF1899D6)
+    shadowColor: Color = Color(0xFF1899D6),
+    size: androidx.compose.ui.unit.Dp = 150.dp
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
@@ -160,7 +161,7 @@ fun SpeakerButton(
 
     Box(
         modifier = modifier
-            .size(75.dp)
+            .size(size)
             .scale(scale)
             .clickable(
                 interactionSource = interactionSource,
@@ -173,26 +174,26 @@ fun SpeakerButton(
         Box(
             modifier = Modifier
                 .matchParentSize()
-                .padding(top = 4.dp)
+                .padding(top = (size.value * 0.05).dp)
                 .background(shadowColor, CircleShape)
         )
         // Surface
         Box(
             modifier = Modifier
                 .matchParentSize()
-                .padding(bottom = 4.dp)
+                .padding(bottom = (size.value * 0.05).dp)
                 .offset(y = translationY)
                 .background(baseColor, CircleShape),
             contentAlignment = Alignment.Center
         ) {
-            Canvas(modifier = Modifier.size(35.dp).offset(x = 4.dp)) {
-                val path = Path().apply {
+            Canvas(modifier = Modifier.size(size * 0.46f).offset(x = (size.value * 0.05).dp)) {
+                val trianglePath = Path().apply {
                     moveTo(0f, 0f)
-                    lineTo(size.width, size.height / 2f)
-                    lineTo(0f, size.height)
+                    lineTo(this@Canvas.size.width, this@Canvas.size.height / 2f)
+                    lineTo(0f, this@Canvas.size.height)
                     close()
                 }
-                drawPath(path, Color.White)
+                drawPath(trianglePath, Color.White)
             }
         }
     }
