@@ -186,14 +186,29 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
         Spacer(modifier = Modifier.weight(1f))
 
     if (isAnswered) {
-        Box(
+        Column(
             modifier = Modifier
                 .fillMaxSize()
         ) {
+            Spacer(modifier = Modifier.weight(1f))
+
+            if (isCorrect) {
+                val speechText = when (currentExercise.type) {
+                    ExerciseType.FILL_IN_THE_BLANK -> currentExercise.context.replace("___", currentExercise.correctAnswer)
+                    ExerciseType.HUSSELAAR -> currentExercise.correctSentence
+                }
+                SpeakerButton(
+                    onClick = { speak(speechText) },
+                    baseColor = Color(0xFF58CC02),
+                    shadowColor = Color(0xFF46A302),
+                    size = 85.dp,
+                    modifier = Modifier.align(Alignment.CenterHorizontally).padding(bottom = 16.dp)
+                )
+            }
+
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .align(Alignment.BottomCenter)
                     .clip(RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp))
                     .background(if (isCorrect) Color(0xFFD7FFB8) else Color(0xFFFFDFE0))
                     .padding(24.dp)
@@ -238,20 +253,6 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
                         isUppercase = false
                     )
                 }
-            }
-
-            if (isCorrect) {
-                val speechText = when (currentExercise.type) {
-                    ExerciseType.FILL_IN_THE_BLANK -> currentExercise.context.replace("___", currentExercise.correctAnswer)
-                    ExerciseType.HUSSELAAR -> currentExercise.correctSentence
-                }
-                SpeakerButton(
-                    onClick = { speak(speechText) },
-                    baseColor = Color(0xFF58CC02),
-                    shadowColor = Color(0xFF46A302),
-                    size = 170.dp,
-                    modifier = Modifier.align(Alignment.Center)
-                )
             }
         }
     } else if (currentExercise.type == ExerciseType.FILL_IN_THE_BLANK && selectedAnswer != null) {
