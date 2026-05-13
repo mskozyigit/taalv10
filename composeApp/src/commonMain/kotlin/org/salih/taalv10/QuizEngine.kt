@@ -240,6 +240,9 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
                 onClick = {
                     isAnswered = true
                     isCorrect = selectedAnswer == currentExercise.correctAnswer
+                    if (isCorrect) {
+                        speak(currentExercise.context.replace("___", currentExercise.correctAnswer))
+                    }
                 },
                 modifier = Modifier.fillMaxWidth().padding(16.dp),
                 isUppercase = false
@@ -252,6 +255,9 @@ fun QuizContent(exercises: List<Exercise>, category: Category, onBack: () -> Uni
                 onClick = {
                     isAnswered = true
                     isCorrect = husselaarWords.joinToString(" ") == currentExercise.correctSentence
+                    if (isCorrect) {
+                        speak(currentExercise.correctSentence)
+                    }
                 },
                 modifier = Modifier.fillMaxWidth().padding(16.dp),
                 isUppercase = false

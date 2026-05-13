@@ -16,6 +16,13 @@ actual fun hideLoadingBar() {
     hideLoadingBarInternal()
 }
 
+@JsFun("(text, lang) => { const utterance = new SpeechSynthesisUtterance(text); utterance.lang = lang; window.speechSynthesis.speak(utterance); }")
+external fun speakInternal(text: String, lang: String)
+
+actual fun speak(text: String, lang: String) {
+    speakInternal(text, lang)
+}
+
 @JsFun("(url) => fetch(url).then(r => r.text())")
 external fun fetchTextInternal(url: String): Promise<JsString>
 
