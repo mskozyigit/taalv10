@@ -1,14 +1,13 @@
 package org.salih.taalv10
 
 import androidx.compose.animation.core.animateDpAsState
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.*
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -16,7 +15,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Canvas
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -141,6 +143,58 @@ fun QuizWordButton(
                 .padding(bottom = 3.dp)
                 .offset(y = translationY)
         )
+    }
+}
+
+@Composable
+fun SpeakerButton(
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    baseColor: Color = Color(0xFF1CB0F6),
+    shadowColor: Color = Color(0xFF1899D6)
+) {
+    val interactionSource = remember { MutableInteractionSource() }
+    val isPressed by interactionSource.collectIsPressedAsState()
+    val scale by animateFloatAsState(if (isPressed) 0.9f else 1f)
+    val translationY by animateDpAsState(if (isPressed) 4.dp else 0.dp)
+
+    Box(
+        modifier = modifier
+            .size(75.dp)
+            .scale(scale)
+            .clickable(
+                interactionSource = interactionSource,
+                indication = null,
+                onClick = onClick
+            ),
+        contentAlignment = Alignment.Center
+    ) {
+        // Shadow
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .padding(top = 4.dp)
+                .background(shadowColor, CircleShape)
+        )
+        // Surface
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .padding(bottom = 4.dp)
+                .offset(y = translationY)
+                .background(baseColor, CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            Canvas(modifier = Modifier.size(35.dp).offset(x = 4.dp)) {
+                val path = Path().apply {
+                    moveTo(0f, 0f)
+                    lineTo(size.width, size.height / 2f)
+                    lineTo(0f, size.height)
+                    close()
+                }
+                drawPath(path, Color.White)
+            }
+        }
     }
 }
 
