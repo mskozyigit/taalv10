@@ -196,7 +196,7 @@
         },
         {
             "id": 18,
-            "sentence": "___ je de leraar bir soru?",
+            "sentence": "___ je de leraar een vraag?",
             "options": [
                 "Stel",
                 "stelt",
@@ -240,7 +240,7 @@
         },
         {
             "id": 22,
-            "sentence": "___ je vriend in bir appartement?",
+            "sentence": "___ je vriend in een appartement?",
             "options": [
                 "Woont",
                 "woon",
@@ -306,7 +306,7 @@
         },
         {
             "id": 28,
-            "sentence": "___ zij bir yeni jurk?",
+            "sentence": "___ zij een nieuwe jurk?",
             "options": [
                 "Koopt",
                 "koop",
@@ -322,13 +322,13 @@
                 "Pakken",
                 "pakt",
                 "pak",
-                "her zaman"
+                "altijd"
             ],
             "correct_answer": "Pakken"
         },
         {
             "id": 30,
-            "sentence": "___ jij melk uit bir beker?",
+            "sentence": "___ jij melk uit een beker?",
             "options": [
                 "Drink",
                 "drinkt",
@@ -350,7 +350,7 @@
         },
         {
             "id": 32,
-            "sentence": "___ je vanavond naar müzik?",
+            "sentence": "___ je vanavond naar muziek?",
             "options": [
                 "Luister",
                 "luistert",
@@ -394,7 +394,7 @@
         },
         {
             "id": 36,
-            "sentence": "___ de zon bugün erg hard?",
+            "sentence": "___ de zon vandaag erg hard?",
             "options": [
                 "Schijnt",
                 "schijn",
@@ -438,7 +438,7 @@
         },
         {
             "id": 40,
-            "sentence": "___ de trein tam zamanında?",
+            "sentence": "___ de trein precies op tijd?",
             "options": [
                 "Komt",
                 "kom",
@@ -449,7 +449,7 @@
         },
         {
             "id": 41,
-            "sentence": "___ je vanavond bir güzel şarkı?",
+            "sentence": "___ je vanavond een güzel şarkı?",
             "options": [
                 "Zing",
                 "zingt",
@@ -471,7 +471,7 @@
         },
         {
             "id": 43,
-            "sentence": "___ jij je tanden her sabah?",
+            "sentence": "___ jij je tanden elke ochtend?",
             "options": [
                 "Poets",
                 "poetst",
@@ -482,7 +482,7 @@
         },
         {
             "id": 44,
-            "sentence": "___ de student de zor soruyu?",
+            "sentence": "___ de student de de moeilijke vraag?",
             "options": [
                 "Begrijpt",
                 "begrijp",
@@ -493,7 +493,7 @@
         },
         {
             "id": 45,
-            "sentence": "___ je bugün bir fotoğraf çekmek?",
+            "sentence": "___ je vandaag een foto maken?",
             "options": [
                 "Wil",
                 "wilt",
@@ -504,12 +504,12 @@
         },
         {
             "id": 46,
-            "sentence": "___ de vrouw de brief bugün?",
+            "sentence": "___ de vrouw de brief vandaag?",
             "options": [
                 "Schrijft",
                 "schrijf",
                 "schrijven",
-                "her zaman"
+                "altijd"
             ],
             "correct_answer": "Schrijft"
         },
@@ -526,7 +526,7 @@
         },
         {
             "id": 48,
-            "sentence": "___ jij de auto van baban?",
+            "sentence": "___ jij de auto van je vader?",
             "options": [
                 "Was",
                 "wast",
@@ -548,7 +548,7 @@
         },
         {
             "id": 50,
-            "sentence": "___ je bugün in het park?",
+            "sentence": "___ je vandaag in het park?",
             "options": [
                 "Speel",
                 "speelt",

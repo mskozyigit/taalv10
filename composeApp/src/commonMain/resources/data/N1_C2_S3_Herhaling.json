@@ -20,7 +20,7 @@
         },
         {
             "id": 2,
-            "sentence": "___ is jouw yeni docent?",
+            "sentence": "___ is jouw nieuwe docent?",
             "options": [
                 "Wie",
                 "Wat",
@@ -31,7 +31,7 @@
         },
         {
             "id": 3,
-            "sentence": "___ je bugün bir elma?",
+            "sentence": "___ je vandaag een appel?",
             "options": [
                 "Eet",
                 "Eetst",
@@ -75,7 +75,7 @@
         },
         {
             "id": 7,
-            "sentence": "___ hij bij bir büyük şirket?",
+            "sentence": "___ hij bij een groot bedrijf?",
             "options": [
                 "Werkt",
                 "Werk",
@@ -86,7 +86,7 @@
         },
         {
             "id": 8,
-            "sentence": "___ appels koop je bugün?",
+            "sentence": "___ appels koop je vandaag?",
             "options": [
                 "Hoeveel",
                 "Wat",
@@ -141,7 +141,7 @@
         },
         {
             "id": 13,
-            "sentence": "___ jij in bir appartement?",
+            "sentence": "___ jij in een appartement?",
             "options": [
                 "Woon",
                 "Woont",
@@ -163,7 +163,7 @@
         },
         {
             "id": 15,
-            "sentence": "___ de kinderen dışarıda?",
+            "sentence": "___ de kinderen buiten?",
             "options": [
                 "Spelen",
                 "Speelt",
@@ -174,7 +174,7 @@
         },
         {
             "id": 16,
-            "sentence": "___ kost deze yeni bisiklet?",
+            "sentence": "___ kost deze nieuwe fiets?",
             "options": [
                 "Hoeveel",
                 "Hoe",
@@ -185,7 +185,7 @@
         },
         {
             "id": 17,
-            "sentence": "___ u de yeni müdür?",
+            "sentence": "___ u de nieuwe directeur?",
             "options": [
                 "Bent",
                 "Ben",
@@ -317,7 +317,7 @@
         },
         {
             "id": 29,
-            "sentence": "___ je vanavond bir şarkı?",
+            "sentence": "___ je vanavond een liedje?",
             "options": [
                 "Zing",
                 "zingt",
@@ -361,7 +361,7 @@
         },
         {
             "id": 33,
-            "sentence": "___ jullie morgen bir pasta?",
+            "sentence": "___ jullie morgen een pasta?",
             "options": [
                 "Bakken",
                 "Bakt",
@@ -427,7 +427,7 @@
         },
         {
             "id": 39,
-            "sentence": "___ je bugün met de bus?",
+            "sentence": "___ je vandaag met de bus?",
             "options": [
                 "Kom",
                 "Komt",
@@ -449,7 +449,7 @@
         },
         {
             "id": 41,
-            "sentence": "___ de student de zor soruyu?",
+            "sentence": "___ de student de moeilijke vraag?",
             "options": [
                 "Begrijpt",
                 "Begrijp",
@@ -471,7 +471,7 @@
         },
         {
             "id": 43,
-            "sentence": "___ jij je tanden her sabah?",
+            "sentence": "___ jij je tanden elke ochtend?",
             "options": [
                 "Poets",
                 "Poetst",
@@ -493,7 +493,7 @@
         },
         {
             "id": 45,
-            "sentence": "___ de zon bugün erg hard?",
+            "sentence": "___ de zon vandaag erg fel?",
             "options": [
                 "Schijnt",
                 "Schijn",
@@ -515,7 +515,7 @@
         },
         {
             "id": 47,
-            "sentence": "___ jij de auto van baban?",
+            "sentence": "___ jij de auto van je vader?",
             "options": [
                 "Was",
                 "Wast",

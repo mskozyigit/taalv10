@@ -31,7 +31,7 @@
         },
         {
             "id": 3,
-            "sentence": "Vandaag ___ mijn broer bir auto.",
+            "sentence": "Vandaag ___ mijn broer een auto.",
             "options": [
                 "koopt",
                 "kopen",
@@ -53,7 +53,7 @@
         },
         {
             "id": 5,
-            "sentence": "Nu ___ jij bir brief aan oma.",
+            "sentence": "Nu ___ jij een brief aan oma.",
             "options": [
                 "schrijf",
                 "schrijven",
@@ -152,7 +152,7 @@
         },
         {
             "id": 14,
-            "sentence": "Vandaag ___ wij bir lekkere taart.",
+            "sentence": "Vandaag ___ wij een lekkere taart.",
             "options": [
                 "bakken",
                 "bakt",
@@ -273,7 +273,7 @@
         },
         {
             "id": 25,
-            "sentence": "Mijn vader ___ bir yeni auto.",
+            "sentence": "Mijn vader ___ een yeni auto.",
             "options": [
                 "koopt",
                 "kopen",
@@ -295,7 +295,7 @@
         },
         {
             "id": 27,
-            "sentence": "Wij ___ in bir klein dorp.",
+            "sentence": "Wij ___ in een klein dorp.",
             "options": [
                 "wonen",
                 "woont",
@@ -383,7 +383,7 @@
         },
         {
             "id": 35,
-            "sentence": "De vrouw ___ bir mooie foto.",
+            "sentence": "De vrouw ___ een mooie foto.",
             "options": [
                 "maakt",
                 "maken",
@@ -427,7 +427,7 @@
         },
         {
             "id": 39,
-            "sentence": "De kat ___ melk uit bir bakje.",
+            "sentence": "De kat ___ melk uit een bakje.",
             "options": [
                 "drinkt",
                 "drinken",
@@ -482,7 +482,7 @@
         },
         {
             "id": 44,
-            "sentence": "Vandaag ___ zij bir rode jurk.",
+            "sentence": "Vandaag ___ zij een rode jurk.",
             "options": [
                 "draagt",
                 "dragen",
@@ -493,7 +493,7 @@
         },
         {
             "id": 45,
-            "sentence": "Jullie ___ bir zeer goede vriend.",
+            "sentence": "Jullie ___ een zeer goede vriend.",
             "options": [
                 "zijn",
                 "bent",
@@ -526,7 +526,7 @@
         },
         {
             "id": 48,
-            "sentence": "Nu ___ jij bir moeilijke vraag.",
+            "sentence": "Nu ___ jij een moeilijke vraag.",
             "options": [
                 "stel",
                 "stellen",
